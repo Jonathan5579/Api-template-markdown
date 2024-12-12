@@ -2,7 +2,7 @@
 
 - Adopted from: https://stubby4j.com/docs/admin_portal.html
 - Inspired by Swagger API docs style & structure: https://petstore.swagger.io/#/pet
-
+- Modified style to use colors
 ------------------------------------------------------------------------------------------
 
 <style>
@@ -33,7 +33,7 @@ details{
 }
 
 code.post{
-  background-color:rgb(81, 216, 92);
+  background-color:rgb(73, 170, 82);
 }
 
 .get{
@@ -45,7 +45,7 @@ code.get{
 }
 
 .put{
-  background-color:rgba(170, 130, 56, 0.36);
+  background-color:rgba(189, 160, 82, 0.36);
 }
 
 code.put{
@@ -53,7 +53,7 @@ code.put{
 }
 
 .delete{
-  background-color:rgba(170, 56, 56, 0.36);
+  background-color:rgba(151, 74, 74, 0.36);
 }
 
 code.delete{
@@ -65,6 +65,124 @@ code.delete{
 
 
 
+
+## Templates...
+
+<details class='post'>
+   <summary><code class='api_tag post'>POST</code><b> /</b> Post description</summary>
+
+### Description
+
+A short summary of what it does, and metadata needed.
+
+### Parameters
+
+> None
+
+### Json
+> Json
+
+### Responses
+
+> | http code     | description           | content-type              | response                                                            |
+> |---------------|-----------------------| --------------------------|---------------------------------------------------------------------|
+> | `200/300/400`         | description    | `application/json`        | `{"status": 500,"error": "6001","message": "locación no existe"}`    |
+
+### Example 
+
+> ```json
+>   {Example to make a request}
+> ```
+
+</details>
+
+<details class='get'>
+ <summary><code class='api_tag get'>GET</code><b> /</b> Get description</summary>
+
+### Description
+
+A short summary of what it does, and metadata needed.
+
+### Parameters
+
+> None
+
+### Json
+> Json
+
+### Responses
+
+> | http code     | description           | content-type              | response                                                            |
+> |---------------|-----------------------| --------------------------|---------------------------------------------------------------------|
+> | `200/300/400`         | description    | `application/json`        | `{"status": 500,"error": "6001","message": "locación no existe"}`    |
+
+### Example 
+
+> ```json
+>   {Example to make a request}
+> ```
+
+</details>
+
+<details class='put'>
+ <summary><code class='api_tag put'>PUT</code><b> /</b> Put description</summary>
+
+### Description
+
+A short summary of what it does, and metadata needed.
+
+### Parameters
+
+> None
+
+### Json
+> Json
+
+### Responses
+
+> | http code     | description           | content-type              | response                                                            |
+> |---------------|-----------------------| --------------------------|---------------------------------------------------------------------|
+> | `200/300/400`         | description    | `application/json`        | `{"status": 500,"error": "6001","message": "locación no existe"}`    |
+
+### Example 
+
+> ```json
+>   {Example to make a request}
+> ```
+
+</details>
+
+
+<details class='delete'>
+ <summary><code class='api_tag delete'>DELETE</code><b> /</b> Delete description</summary>
+
+### Description
+
+A short summary of what it does, and metadata needed.
+
+### Parameters
+
+> None
+
+### Json
+> Json
+
+### Responses
+
+> | http code     | description           | content-type              | response                                                            |
+> |---------------|-----------------------| --------------------------|---------------------------------------------------------------------|
+> | `200/300/400`         | description    | `application/json`        | `{"status": 500,"error": "6001","message": "locación no existe"}`    |
+
+### Example 
+
+> ```json
+>   {Example to make a request}
+> ```
+
+</details>
+
+
+# Examples
 
 ## Creating new/overwriting existing stubs & proxy configs
 
@@ -187,31 +305,6 @@ code.delete{
 
 > ```javascript
 >  curl -X GET -H "Content-Type: application/json" http://localhost:8889/proxy-config/default
-> ```
-
-</details>
-
-
-<details>
-  <summary><code>GET</code> <code><b>/proxy-config/{uuid}</b></code> <code>(gets proxy config by its uuid property)</code></summary>
-
-### Parameters
-
-> | name   |  type      | data type      | description                                                  |
-> |--------|------------|----------------|--------------------------------------------------------------|
-> | `uuid` |  required  | string         | The specific proxy config unique idendifier                  |
-
-### Responses
-
-> | http code     | content-type                      | response                                                            |
-> |---------------|-----------------------------------|---------------------------------------------------------------------|
-> | `200`         | `text/plain;charset=UTF-8`        | YAML string                                                         |
-> | `400`         | `application/json`                | `{"code":"400","message":"Bad Request"}`                            |
-
-### Example cURL
-
-> ```javascript
->  curl -X GET -H "Content-Type: application/json" http://localhost:8889/proxy-config/some-unique-uuid-string
 > ```
 
 </details>
